@@ -1,7 +1,7 @@
 set +o xtrace
-COW_DIR=$DEST/watcher
-COW_CONF_DIR = "/etc/cow"
-COW_CONF = $COW_CONF_DIR/cow.conf
+COW_DIR=$DEST/devstack-plugin-cow
+COW_CONF_DIR=/etc/cow
+COW_CONF=$COW_CONF_DIR/cow.conf
 COW_BIN_DIR=$COW_DIR/bin
 
 function install_cow() {
@@ -11,5 +11,5 @@ function install_cow() {
 }
 
 function start_cow() {
-    run_process cow-engine "$WATCHER_BIN_DIR/watcher-applier --config-file $WATCHER_CONF"
+    run_process cow-engine "$COW_BIN_DIR/cow-engine --config-file $COW_CONF"
 }
