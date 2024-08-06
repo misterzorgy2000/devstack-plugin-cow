@@ -1,7 +1,15 @@
 set +o xtrace
+COW_DIR=$DEST/watcher
+COW_CONF_DIR = "/etc/cow"
+COW_CONF = $COW_CONF_DIR/cow.conf
+COW_BIN_DIR=$COW_DIR/bin
 
 function install_cow() {
     echo "INSTALLING COW"
 
     git_clone https://github.com/misterzorgy2000/cow.git
+}
+
+function start_cow() {
+    run_process cow-engine "$WATCHER_BIN_DIR/watcher-applier --config-file $WATCHER_CONF"
 }
