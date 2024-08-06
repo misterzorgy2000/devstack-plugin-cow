@@ -1,6 +1,6 @@
 set +o xtrace
 
-. $DEST/cow/devstack/lib/cow
+. $DEST/lib/cow
 
 function init_cow {
     echo 'Init COW'
