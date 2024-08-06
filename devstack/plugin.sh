@@ -15,7 +15,7 @@ if is_service_enabled template; then
 
     if [[ "$1" == "stack" && "$2" == "pre-install" ]]; then
         # Set up system services
-        echo_summary "Configuring system services Template"
+        echo_summary "Configuring system services Cow"
         install_cow 
 
     elif [[ "$1" == "stack" && "$2" == "install" ]]; then

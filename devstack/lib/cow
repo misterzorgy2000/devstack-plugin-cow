@@ -11,5 +11,7 @@ function install_cow() {
 }
 
 function start_cow() {
+    sleep 10
+    echo "---------------------------STARTING COW------------------------------"
     run_process cow-engine "$COW_BIN_DIR/cow-engine --config-file $COW_CONF"
 }
