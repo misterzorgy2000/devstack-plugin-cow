@@ -11,7 +11,7 @@ function configure_cow {
 }
 
 # check for service enabled
-if is_service_enabled template; then
+if is_service_enabled cow; then
 
     if [[ "$1" == "stack" && "$2" == "pre-install" ]]; then
         # Set up system services
