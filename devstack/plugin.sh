@@ -31,7 +31,7 @@ if is_service_enabled template; then
     elif [[ "$1" == "stack" && "$2" == "extra" ]]; then
         # Initialize and start the template service
         echo_summary "Initializing Template"
-        init_cow
+        start_cow
     fi
 
     if [[ "$1" == "unstack" ]]; then
